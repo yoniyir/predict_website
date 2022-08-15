@@ -1,0 +1,370 @@
+@keyframes wipe-enter {
+    0% {
+        filter: blur(15px);
+        transform: scaleY(0);
+    }
+
+    50% {
+        filter: blur(0px);
+        transform: scaleY(1);
+    }
+}
+
+
+html {
+
+    font-family: 'Arimo', sans-serif;
+    background: url(bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+
+
+    color: white;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.p1 {
+    width: 50%;
+    max-width: 500px;
+
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(0 0 0 / 40%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    margin: 3px;
+}
+
+.p2 {
+    width: 50%;
+    max-width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(0 0 0 / 40%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    margin: 3px;
+
+
+}
+
+#p1_current, #p2_current {
+
+    display: flex;
+    align-items: center;
+
+}
+
+.profile {
+    display: inline-block;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 20px;
+
+}
+
+.club {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    padding-bottom: 10px;
+
+}
+
+.profile_data {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 20px;
+}
+
+.form-select {
+    display: block;
+    /* width: 100%; */
+    -moz-padding-start: calc(0.75rem - 2px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: end;
+
+}
+
+.cross {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* 10 */
+.btn-10 {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.btn-10:after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(.1);
+    transform: scale(.1);
+}
+
+.btn-10:hover {
+    color: #fff;
+}
+
+.btn-10:hover:after {
+    background: rgb(13, 13, 26);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid rgb(255, 255, 255);
+    font-family: inherit;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    color: white;
+
+}
+
+#cross_details {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.players_history {
+    display: flex;
+    flex-direction: row;
+}
+
+.predict_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.selectize-control.single .selectize-input:after {
+    right: 10px;
+}
+
+#player_list_1-selectized, #player_list_2-selectized {
+    margin-right: 10px !important;
+}
+
+.selectize-dropdown {
+    min-width: 200px !important;
+}
+
+#profile_div1, #profile_div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+@keyframes progress-animation {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+
+.progress {
+    width: 100%;
+    max-width: 260px;
+    height: 12px;
+    background: #e1e4e8;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #ffd33d, #ea4aaa 17%, #b34bff 34%, #01feff 51%, #ffd33d 68%, #ea4aaa 85%, #b34bff);
+    background-size: 300% 100%;
+    animation: progress-animation 2s linear infinite;
+}
+
+.dnone {
+    display: none;
+}
+
+#prog_text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glow {
+    -webkit-box-shadow: 0px 0px 10px 1px rgb(255 255 255 / 62%);
+    -moz-box-shadow: 0px 0px 10px 1px rgb(255 255 255 / 62%);
+    box-shadow: 0px 0px 10px 1px rgb(255 255 255 / 62%);
+}
+
+.wipe {
+    animation: wipe-enter 1s;
+
+}
+
+.winner {
+    height: 60px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 14px;
+    border: 1px solid white;
+}
+
+.btn_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#error_message {
+    text-align: center;
+    font-size: small;
+    color: #ff3d3d;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        flex-direction: row;
+    }
+
+    .p1 {
+        order: 1;
+        margin: 10px;
+        min-width: 400px;
+        border-radius: 42px;
+    }
+
+    .p2 {
+        order: 2;
+        margin: 10px;
+        min-width: 400px;
+        border-radius: 42px;
+
+    }
+
+    .btn_cont {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    #cross_details {
+        margin-top: 0px !important;
+    }
+
+    .progress {
+        margin-top: -30px;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .p1, .p2 {
+        min-width: 300px;
+    }
+
+    #p1_team, #p2_team {
+        font-size: 12px;
+    }
+
+    .profile_data {
+        text-align: -webkit-right;
+    }
+
+    p {
+        line-height: 25px;
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}

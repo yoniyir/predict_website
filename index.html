@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/85e83f9dd1.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
+        integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
+        integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Data Science Project</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>פרויקט גמר - מדעי הנתונים</h1>
+        <h2>חיזוי מנצח - טניס שולחן</h2>
+    </div>
+    <div class="content">
+        <div class="p2">
+            <h2>:בחר שחקן 2</h2>
+            <select id="player_list_2" class="form-select" onchange="set_player(2)" value="none">
+                <option value="" selected disabled hidden>לחץ לחיפוש שחקן</option>
+            </select>
+            <div id="p2_current">
+                <div id="profile_div2"></div>
+                <div class="profile_data">
+                    <p id="p2_name"></p>
+                    <p id="p2_rank"></p>
+                    <p id="p2_points"></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="btn_cont">
+            <button class="custom-btn btn-10" onclick="cross_players()">התחל</button>
+            <span id="error_message"></span>
+        </div>
+        <div class="p1">
+            <h2>:בחר שחקן 1</h2>
+            <select class="form-select" id="player_list_1" onchange="set_player(1)">
+                <option value="" selected disabled hidden>לחץ לחיפוש שחקן</option>
+            </select>
+            <div id="p1_current">
+                <div id="profile_div1"></div>
+                <div class="profile_data">
+                    <p id="p1_name"></p>
+                    <p id="p1_rank"></p>
+                    <p id="p1_points"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cross">
+        <div id="cross_details" style="margin-top:-75px;">
+            <h2 id="history_title"></h2>
+            <h3 id="prev_games"></h3>
+            <div class="players_history" id="p_h">
+            </div>
+            <h1 id="winner_title"></h1>
+        </div>
+        <div id="prog_bar" class="progress dnone">
+            <span id="myBar" class="progress-bar" style="width: 95%"></span>
+        </div>
+        <p id="prog_text"></p>
+    </div>
+</body>
+
+</html>
