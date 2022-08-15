@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
         headers: { 'Content-Type': 'application/json' }
     }).then(data => data.json()).then(res => finish(res))
 });
+/*
 $(document).ready( function() {
     // Remove webhostapp image 
     $('body > div:last').remove()
     //Remove analitycs script
     $('body > script:last').remove()
-})
+})*/
 
 function finish(res) {
     let optionList1 = document.getElementById('player_list_1').options;
